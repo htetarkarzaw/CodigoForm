@@ -116,7 +116,7 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(ActivityRegisterB
                 return@setOnClickListener
             }
             var gender = "MR."
-            gender = if(binding.rbFemale.isChecked){
+            gender = if(binding.rbMale.isChecked){
                 "MR."
             }else{
                 "MRS."
