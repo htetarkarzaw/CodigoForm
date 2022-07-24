@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">readytotravel</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="login_with_email_address">Login with email address</string>
+    <string name="login_with_facebook">Login with Facebook</string>
+    <string name="sign_up_with_facebook_for_the_most_fulfilling_trip_planning_experience_with_us">Sign up with Facebook for the most\nfulfilling trip planning experience with us!</string>
+    <string name="welcome_to_ready_to_travel">Welcome to\nReady To Travel</string>
+    <string name="almost_there">Almost there!</string>
+    <string name="complete_the_form_below_to_create_your_ready_to_travel_account">Complete the form below to create\nyour Ready To Travel account.</string>
+    <string name="create_my_account_now">Create my account now</string>
+    <string name="mobile_no_optional">Mobile no. (Optional)</string>
+    <string name="mandatory">*Mandatory</string>
+    <string name="first_name">First Name *</string>
+    <string name="last_name">Last Name *</string>
+    <string name="email_address">Email Address *</string>
+    <string name="date_of_birth">Date of Birth *</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="female">Female</string>
+    <string name="nationality">Nationality *</string>
+    <string name="country_of_residence">Country of Residence *</string>
+    <string name="male">Male</string>
+
+    <array name="array_nationality">
+        <item>Singaporean</item>
+        <item>Thai</item>
+        <item>Burmese</item>
+        <item>Vietnamese</item>
+        <item>Chinese</item>
+    </array>
+    <array name="array_Residence">
+        <item>Singapore</item>
+        <item>Thailand</item>
+        <item>Myanmar</item>
+        <item>Vietnam</item>
+        <item>China</item>
+    </array>
+    <array name="array_phone">
+        <item>+65</item>
+        <item>+66</item>
+        <item>+95</item>
+        <item>+84</item>
+        <item>+86</item>
+    </array>
+</resources>

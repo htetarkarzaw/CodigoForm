@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSmokeWhite"
+    tools:context=".common.activities.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/almost_there"
+        android:fontFamily="@font/chivo_black"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/chivo_regular"
+        android:text="@string/complete_the_form_below_to_create_your_ready_to_travel_account"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvMandatory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/mandatory"
+        android:textColor="@color/colorGrey"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutButtons"
+        app:layout_constraintTop_toBottomOf="@id/tvMandatory">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideHalf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/containerFirstNameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/first_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="24"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/vLine1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSmokeWhite"
+            app:layout_constraintTop_toBottomOf="@id/containerFirstNameInput" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/containerLastNameInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerFirstNameInput">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/last_name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="24"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/vLine2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSmokeWhite"
+            app:layout_constraintTop_toBottomOf="@id/containerLastNameInput" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/containerEmailAddressInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerLastNameInput">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/email_address"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/vLine3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSmokeWhite"
+            app:layout_constraintTop_toBottomOf="@id/containerEmailAddressInput" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/containerDOBInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="50dp"
+            android:paddingBottom="8dp"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toStartOf="@id/guideHalf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerEmailAddressInput">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/date_of_birth"
+                android:imeOptions="actionNext"
+                android:inputType="none"
+                android:maxLines="1"
+                android:text="@string/dd_mm_yyyy"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dob"
+            app:layout_constraintBottom_toBottomOf="@id/containerDOBInput"
+            app:layout_constraintEnd_toEndOf="@id/containerDOBInput"
+            app:layout_constraintTop_toTopOf="@id/containerDOBInput"/>
+
+        <RadioGroup
+            android:id="@+id/toggle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_radio_group"
+            android:checkedButton="@+id/offer"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/containerDOBInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/containerDOBInput"
+            app:layout_constraintTop_toTopOf="@id/containerDOBInput">
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_widget_backgorund"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/female"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_widget_backgorund"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/male"
+                android:textColor="@color/black" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/vLine4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/colorSmokeWhite"
+            app:layout_constraintEnd_toEndOf="@id/containerDOBInput"
+            app:layout_constraintStart_toStartOf="@id/containerDOBInput"
+            app:layout_constraintTop_toBottomOf="@id/containerDOBInput" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/containerNationalityInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerDOBInput">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etNationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/nationality"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/vLine5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSmokeWhite"
+            app:layout_constraintTop_toBottomOf="@id/containerNationalityInput" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/containerCountryOfResidenceInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerNationalityInput">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etCountryOfResidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/country_of_residence"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/vLine6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSmokeWhite"
+            app:layout_constraintTop_toBottomOf="@id/containerCountryOfResidenceInput" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/containerMobileNoInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containerCountryOfResidenceInput"
+            app:prefixText="+65"
+            app:prefixTextColor="@color/black">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/mobile_no_optional"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:id="@+id/vLine7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorSmokeWhite"
+            app:layout_constraintTop_toBottomOf="@id/containerMobileNoInput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/guitar"
+        app:layout_constraintEnd_toEndOf="@id/layoutInput"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnCreateMyAccountNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_cyan_gradient_button"
+            android:text="@string/create_my_account_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
